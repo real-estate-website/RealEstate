@@ -21,4 +21,14 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'])->name('annonces');
+
+Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
+
+Route::get('/contacts', [ImmoController::class, 'contacts'])->middleware(['auth'])->middleware(['auth'])->name('contacts');
+
+Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');
+
+Route::get('/messages',[ImmoController::class, 'messages'] )->middleware(['auth'])->name('messages');
+
 require __DIR__.'/auth.php';
