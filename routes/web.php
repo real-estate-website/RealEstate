@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\ImmoController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,20 +21,12 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-Route::get('/annonces', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'])->name('annonces');
 
-Route::get('/contact', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/contacts', [ImmoController::class, 'contacts'])->middleware(['auth'])->middleware(['auth'])->name('contacts');
 
-Route::get('/favorie', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');
 
-Route::get('/messages', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/messages',[ImmoController::class, 'messages'] )->middleware(['auth'])->name('messages');
 
 require __DIR__.'/auth.php';
