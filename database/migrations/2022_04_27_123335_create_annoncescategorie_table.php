@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('annoncescategories', function (Blueprint $table) {
-            $table->integer('categories_id');
-            $table->integer('annonces_id');
+        Schema::create('annonce_categories', function (Blueprint $table) {
+            $table->id();
+            $table->integer('categorie_id');
+            $table->integer('annonce_id');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('annoncescategorie');
+        Schema::dropIfExists('annonce_categories');
     }
 };

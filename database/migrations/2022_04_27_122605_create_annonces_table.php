@@ -19,6 +19,9 @@ return new class extends Migration
             $table->string('titre');
             $table->string('description');
             $table->string('type');
+            $table->integer('nbr_piece');
+            $table->integer('nbr_chambre');
+            $table->integer('surface');
             $table->integer('prix');
             $table->timestamps();
         });

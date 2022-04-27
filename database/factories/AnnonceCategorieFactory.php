@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\AnnonceCategorie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,13 @@ class AnnonceCategorieFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = AnnonceCategorie::class;
+
     public function definition()
     {
         return [
-            //
+            'categorie_id' => $this->faker->numberBetween(1, 10),
+            'annonce_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }
