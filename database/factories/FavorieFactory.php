@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Favorie;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,12 @@ class FavorieFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Favorie::class;
+
     public function definition()
     {
         return [
-            //
+            'url' => $this->faker->url(),
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Message;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,10 +15,16 @@ class MessageFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    protected $model = Message::class;
+
     public function definition()
     {
         return [
-            //
+            'objet' => $this->faker->title(),
+            'contenu' => $this->faker->text(),
+            'expediteur_id' => $this->faker->numberBetween(1, 10),
+            'destinataire_id' => $this->faker->numberBetween(1, 10),
+            'annonce_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

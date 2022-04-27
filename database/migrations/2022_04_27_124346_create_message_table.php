@@ -15,11 +15,11 @@ return new class extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
-            $table->integer('annonce_id');
-            $table->string('object');
+            $table->string('objet');
             $table->string('contenu');
-            $table->string('expediteurs_id');
-            $table->string('destinataires_id');
+            $table->integer('annonce_id');
+            $table->integer('expediteur_id');
+            $table->integer('destinataire_id');
             $table->timestamps();
         });
     }
