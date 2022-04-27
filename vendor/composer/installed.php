@@ -5,11 +5,20 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'c63c282dd3541e971dc9cfff9247e1ba80fe4288',
+        'reference' => '07a7afef3901ce48038b5dac19887d940810f3be',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
     'versions' => array(
+        'bennett-treptow/laravel-migration-generator' => array(
+            'pretty_version' => '4.2.1',
+            'version' => '4.2.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../bennett-treptow/laravel-migration-generator',
+            'aliases' => array(),
+            'reference' => '97569525b82c84f6a01b4611d42aa8b85bfb51f3',
+            'dev_requirement' => true,
+        ),
         'brick/math' => array(
             'pretty_version' => '0.9.3',
             'version' => '0.9.3.0',
@@ -394,6 +403,15 @@
                 0 => 'v9.9.0',
             ),
         ),
+        'kitloong/laravel-migrations-generator' => array(
+            'pretty_version' => 'v5.2.0',
+            'version' => '5.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../kitloong/laravel-migrations-generator',
+            'aliases' => array(),
+            'reference' => '434237eeab043c13ab7657b3fd704b43cf5bf39e',
+            'dev_requirement' => true,
+        ),
         'kodova/hamcrest-php' => array(
             'dev_requirement' => true,
             'replaced' => array(
@@ -424,7 +442,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'c63c282dd3541e971dc9cfff9247e1ba80fe4288',
+            'reference' => '07a7afef3901ce48038b5dac19887d940810f3be',
             'dev_requirement' => false,
         ),
         'laravel/sail' => array(
@@ -498,6 +516,15 @@
             'aliases' => array(),
             'reference' => 'ff6248ea87a9f116e78edd6002e39e5128a0d4dd',
             'dev_requirement' => false,
+        ),
+        'marcj/topsort' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../marcj/topsort',
+            'aliases' => array(),
+            'reference' => '972f58e42b5f110a0a1d8433247f65248abcfd5c',
+            'dev_requirement' => true,
         ),
         'mockery/mockery' => array(
             'pretty_version' => '1.5.0',
