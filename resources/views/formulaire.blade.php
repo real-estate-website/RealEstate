@@ -21,30 +21,16 @@
   <label class="form-check-label" for="maison">Maison</label>
 </div>
 <br><br>
+<label for="titre">Titre de votre annonce</label>
+<input class="form-control" type="text" placeholder="Titre" aria-label="default input example" id="titre">
+
+<br>
 <div class="form-floating">
   <textarea class="form-control" placeholder="Ecrirer votre maison" id="description" style="height: 100px" required></textarea>
   <label for="description">Description</label>
 </div>
 <br><br>
 
-<select class="form-select" aria-label="Default select example" required>
-  <option selected>Le nombre de pièces</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5+</option>
-</select>
-<br>
-<select class="form-select" aria-label="Default select example" required>
-  <option selected>Le nombre de chambres</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5+</option>
-</select>
-<br>
 <div class="row">
     <div class="col-6">
 <input type="number" name="surface" id="surface" required>
