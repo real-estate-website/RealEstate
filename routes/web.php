@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\Controllers\ImmoController;
+use App\Http\Controllers\ImmoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +13,6 @@ use App\http\Controllers\ImmoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
