@@ -28,4 +28,9 @@ class ImmoController extends Controller
         $favories = Favorie::all();
         return view('favories',['favories' => $favories]);
     }
+
+    public function createannonce ( Request $request)
+    {   
+        return view('formulaire');
+    }
 }
