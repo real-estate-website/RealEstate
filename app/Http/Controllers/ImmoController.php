@@ -17,6 +17,12 @@ class ImmoController extends Controller
         return view('annonces',['annonces' => $annonces]);
     }
 
+    public function annoncesdetails ( Request $request)
+    {   
+        $annoncesdetails = Annonce::findOrFail($request->id);
+        return view('annoncesdetails',['details' => $annoncesdetails]);
+    }
+
     public function Messages ( Request $request)
     {
         $annonces = Message::all();

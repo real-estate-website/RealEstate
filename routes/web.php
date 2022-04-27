@@ -22,9 +22,10 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'])->name('annonces');
-Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
 
-Route::get('/contacts', [ImmoController::class, 'contacts'])->middleware(['auth'])->middleware(['auth'])->name('contacts');
+Route::get('/annoncesdetails/{id}', [ImmoController::class, 'annoncesdetails'])->middleware(['auth'])->name('annoncesdetails');
+
+Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
 
 Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');
 
