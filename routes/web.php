@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ImmoController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Formulaire;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,5 +37,7 @@ Route::get('/contacts', [ImmoController::class, 'contacts'])->middleware(['auth'
 Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');
 
 Route::get('/messages',[ImmoController::class, 'messages'] )->middleware(['auth'])->name('messages');
+
+Route::post('/formulaire', [Formulaire::class, 'insert'])->middleware(['auth'])->name('formulaire');
 
 require __DIR__.'/auth.php';
