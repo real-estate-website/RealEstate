@@ -27,15 +27,12 @@ class Formulaire extends Controller
         $annonce->save();
 
         if($annonce->save())
-        {
-          
+        {      
             $image = $request->file('file');
             //     dd($images);
          
                    //  $image = Storage::putFileAs('file', $image , $image->getClientOriginalName());
-                     $path = $request->file('file')->store('files');
-         
-           
+                     $path = $request->file('file')->store('files');    
                      $media = new Image();
                      $media -> url = $path;
                      $media -> nom = $image->getClientOriginalName();
@@ -43,12 +40,8 @@ class Formulaire extends Controller
          
                  
         }
-      
 
-       
-
-
-        return view('annonce.index');
+        return view('annonces');
     }
 
 }
