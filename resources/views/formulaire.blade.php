@@ -74,18 +74,12 @@
 
                             <button type="submit" class="btn btn-secondary">Envoyer</button>
 
-                            <<<<<<< HEAD </form>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    =======
     </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    >>>>>>> 2fe006f4b283e4e701c3816b5eb46e51fd1e95b3
+
 </x-app-layout>

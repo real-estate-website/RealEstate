@@ -1,29 +1,38 @@
-<div class="py-12">
-    <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-        <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
-            <div class="p-6 bg-white border-b border-gray-200">
-                Modification de favorie# {{$favorie->id}} <br><br>
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Favorie') }}
+        </h2>
+    </x-slot>
 
-                <form method="post" action="#">
-                    Url : <input type="text" name="titre" value="{{ $favorie -> url}}">
-                    <br>
+    <div class="py-12">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-6 bg-white border-b border-gray-200">
+                    Modification de favorie# {{$favorie->id}} <br><br>
 
-                    Description : <input type="textarea" name="description" value="{{ $favorie -> created_at }}">
-                    <br>
+                    <form method="post" action="#">
+                        Url : <input type="text" name="titre" value="{{ $favorie -> url}}">
+                        <br>
 
-                    Type : <input type="text" name="type" value="{{ $favorie -> updated_at }}">
-                    <br>
+                        Description : <input type="text" name="description" value="{{ $favorie -> created_at }}">
+                        <br>
 
-                    <input type="submit" value="modifier">
-                    @csrf
-                </form>
-                <br><br>
+                        Type : <input type="text" name="type" value="{{ $favorie -> updated_at }}">
+                        <br>
 
-                <p> Reference : {{$favorie->id}}</p>
-                <p> Titre de l'favorie : {{$favorie->url}}</p>
+                        <input type="submit" value="modifier">
+                        @csrf
+                    </form>
+                    <br><br>
+
+                    <p> Reference : {{$favorie->id}}</p>
+                    <p> Titre de l'favorie : {{$favorie->url}}</p>
 
 
+                </div>
             </div>
         </div>
     </div>
-</div>
+
+</x-app-layout>
