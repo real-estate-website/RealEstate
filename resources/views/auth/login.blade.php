@@ -50,7 +50,11 @@
                 <x-button class="ml-3">
                     {{ __('Log in') }}
                 </x-button>
-            </div>
+           
+                <a href="login/github" class="ml-3">
+                   <img style="width: 60px; height: 40px;" src="https://getfreepng.com/sitem/storage/downloads/April2021/s9zrwJbJGJoOgruXrBdU.jpg" alt="">
+                </a>
+            
         </form>
     </x-auth-card>
 </x-guest-layout>
