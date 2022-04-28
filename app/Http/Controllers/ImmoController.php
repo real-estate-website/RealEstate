@@ -49,7 +49,7 @@ class ImmoController extends Controller
 
     public function annoncemodify ( Request $request)
     {  
-        $annonce = Annonce::findOrFail($request->id);
+        $annonce = Annonce::find($request->id);
 
         $annonce->titre = $request->titre;
         $annonce->description = $request->description;
@@ -103,30 +103,40 @@ class ImmoController extends Controller
     /* favorie */
 
     public function favories ( Request $request)
-    {   
+    {
         $favories = Favorie::all();
         return view('favories',['favories' => $favories]);
     }
 
-    
+
 
     public function favoriedetails ( Request $request)
-    {   
+    {
         $favoriesdetails = Favorie::findOrFail($request->id);
         return view('favoriedetails',['favorie' => $favoriesdetails]);
     }
 
     public function favoriemodifyform ( Request $request)
-    {  
+    {
         $favorie = Favorie::findOrFail($request->id);
         return view('favoriemodifyform', ['favorie'  => $favorie]);
     }
 
+    public function favoriemodify ( Request $request)
+    {
+        $favorie = Favorie::find($request->id);
+        #dd($request);
+        $favorie->url = $request->url;
+        $favorie->save();    
+        $favorie = Favorie::all();
+        return view('favories',['favories' => $favorie]);
+    }
+
     public function favoriedelete ( Request $request)
-    {  
+    {
         $favorie = Favorie::findOrFail($request->id);
         $favorie->delete();
-        
+
         $favories = Favorie::all();
         return view('favories',['favories' => $favories]);
     }

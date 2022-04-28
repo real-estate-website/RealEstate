@@ -4,14 +4,17 @@
             <div class="p-6 bg-white border-b border-gray-200">
                 Modification de favorie# {{$favorie->id}} <br><br>
 
-                <form method="post" action="#">
-                    Url : <input type="text" name="titre" value="{{ $favorie -> url}}">
+                <form method="post" action="{{ route('favoriemodify') }}">
+                    Url : <input type="text" name="url" value="{{ $favorie -> url}}">
                     <br>
 
-                    Description : <input type="textarea" name="description" value="{{ $favorie -> created_at }}">
+                    Description : <input type="text" name="description" value="{{ $favorie -> created_at }}">
                     <br>
 
                     Type : <input type="text" name="type" value="{{ $favorie -> updated_at }}">
+                    <br>
+
+                    <input type="hidden" name="id" value="{{ $favorie -> id }}">
                     <br>
 
                     <input type="submit" value="modifier">

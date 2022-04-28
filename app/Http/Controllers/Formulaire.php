@@ -40,8 +40,8 @@ class Formulaire extends Controller
          
                  
         }
-
-        return view('annonces');
+        $annonces = Annonce::all();
+        return view('annonces', ['annonces' => $annonces]);
     }
 
 }

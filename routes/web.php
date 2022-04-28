@@ -49,6 +49,8 @@ Route::get('/favoriedetails/{id}', [ImmoController::class, 'favoriedetails'])->m
 
 Route::get('/favoriemodifyform/{id}', [ImmoController::class, 'favoriemodifyform'])->middleware(['auth'])->name('favoriemodifyform');
 
+Route::post('/favoriemodify', [ImmoController::class, 'favoriemodify'])->middleware(['auth'])->name('favoriemodify');
+
 Route::get('/favoriedelete/{id}', [ImmoController::class, 'favoriedelete'])->middleware(['auth'])->name('favoriedelete');
 
 /* favorie */
@@ -58,11 +60,6 @@ Route::get('/messages',[ImmoController::class, 'messages'] )->middleware(['auth'
 
 Route::post('/formulaire', [Formulaire::class, 'insert'])->middleware(['auth'])->name('formulaire');
 
-Route::get('login/github', [AuthenticatedSessionController::class, 'redirectToProvider']);
-
-Route::get('login/github/callback', [AuthenticatedSessionController::class, 'handleProviderCallback']);
-
-require __DIR__.'/auth.php';
 Route::get('/messagemodifyform/{id}',[ImmoController::class, 'messagemodifyform'] )->middleware(['auth'])->name('messagemodifyform');
 
 Route::post('/messagemodify', [ImmoController::class, 'messagemodify'])->middleware(['auth'])->name('messagemodify');
@@ -70,4 +67,12 @@ Route::post('/messagemodify', [ImmoController::class, 'messagemodify'])->middlew
 Route::get('/messagedelete/{id}', [ImmoController::class, 'messagedelete'])->middleware(['auth'])->name('messagedelete');
 
 /* Message */
+
+/* Git */
+
+Route::get('login/github', [AuthenticatedSessionController::class, 'redirectToProvider']);
+
+Route::get('login/github/callback', [AuthenticatedSessionController::class, 'handleProviderCallback']);
+
+/* Git */
 require __DIR__.'/auth.php';
