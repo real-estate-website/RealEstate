@@ -10,14 +10,14 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <div class="container"> 
-                    <form action="" method="post">
+                    <form action="{{ route('formulaire') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="type" id="appartement" value="0" required>
+  <input class="form-check-input" type="radio" name="type" id="appartement" value="appartement" required>
   <label class="form-check-label" for="appartement">Appartement</label>
 </div>
 <div class="form-check form-check-inline">
-  <input class="form-check-input" type="radio" name="type" id="maison" value="1" required>
+  <input class="form-check-input" type="radio" name="type" id="maison" value="maison" required>
   <label class="form-check-label" for="maison">Maison</label>
 </div>
 <br><br>
@@ -54,7 +54,7 @@
 <br><br>
 <div class="mb-3">
   <label for="formFileMultiple" class="form-label">Choisir les images de votre maison...</label>
-  <input class="form-control" type="file" id="formFileMultiple" accept="image/png, image/jpeg" multiple required>
+  <input class="form-control" name="file" type="file" id="formFileMultiple" accept="image/png, image/jpeg"  required>
 </div>
 
 <button type="submit" class="btn btn-primary">Envoyer</button>
