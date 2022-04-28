@@ -22,11 +22,11 @@
 </div>
 <br><br>
 <label for="titre">Titre de votre annonce</label>
-<input class="form-control" type="text" placeholder="Titre" aria-label="default input example" id="titre">
+<input class="form-control" type="text" placeholder="Titre" aria-label="default input example" id="titre" name="titre">
 
 <br>
 <div class="form-floating">
-  <textarea class="form-control" placeholder="Ecrirer votre maison" id="description" style="height: 100px" required></textarea>
+  <textarea class="form-control" placeholder="Ecrirer votre maison" name="description" id="description" style="height: 100px" required></textarea>
   <label for="description">Description</label>
 </div>
 <br><br>
