@@ -21,17 +21,40 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+/* Annonces */
 Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'])->name('annonces');
 
 Route::get('/annoncesdetails/{id}', [ImmoController::class, 'annoncesdetails'])->middleware(['auth'])->name('annoncesdetails');
 
-Route::get('/annoncemodify', [ImmoController::class, 'annoncemodify'])->middleware(['auth'])->name('annoncemodify');
+Route::get('/annoncemodifyform/{id}', [ImmoController::class, 'annoncemodifyform'])->middleware(['auth'])->name('annoncemodifyform');
 
+Route::post('/annoncemodify', [ImmoController::class, 'annoncemodify'])->middleware(['auth'])->name('annoncemodify');
+
+Route::get('/annoncedelete/{id}', [ImmoController::class, 'annoncedelete'])->middleware(['auth'])->name('annoncedelete');
 
 Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
+/* Annonces */
+
+/* favorie */
 
 Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');
 
+Route::get('/favoriedetails/{id}', [ImmoController::class, 'favoriedetails'])->middleware(['auth'])->name('favoriedetails');
+
+Route::get('/favoriemodifyform/{id}', [ImmoController::class, 'favoriemodifyform'])->middleware(['auth'])->name('favoriemodifyform');
+
+Route::get('/favoriedelete/{id}', [ImmoController::class, 'favoriedelete'])->middleware(['auth'])->name('favoriedelete');
+
+/* favorie */
+
+/* Message */
 Route::get('/messages',[ImmoController::class, 'messages'] )->middleware(['auth'])->name('messages');
 
+Route::get('/messagemodifyform/{id}',[ImmoController::class, 'messagemodifyform'] )->middleware(['auth'])->name('messagemodifyform');
+
+Route::post('/messagemodify', [ImmoController::class, 'messagemodify'])->middleware(['auth'])->name('messagemodify');
+
+Route::get('/messagedelete/{id}', [ImmoController::class, 'messagedelete'])->middleware(['auth'])->name('messagedelete');
+
+/* Message */
 require __DIR__.'/auth.php';

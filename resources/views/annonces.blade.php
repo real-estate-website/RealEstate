@@ -11,13 +11,15 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <br>
+
                     <p> Identifiant : {{$annonce->id}}</p>
                     <p> Titre de l'annonce : {{$annonce->titre}}</p>
                     <p> Description : {{$annonce->description}}</p>
                     <p> Type : {{$annonce->type}}</p>
                     <p> Prix : {{$annonce->prix}}</p>
                     [<a href="{{ route('annoncesdetails', $annonce->id )}}">details </a>]
-                    [<a href="{{ route('annoncesmodify', $annonce->id )}}">Modifier </a>]
+                    [<a href="{{ route('annoncemodifyform', $annonce->id )}}"> Modifier </a>]
+                    [<a href="{{ route('annoncedelete', $annonce->id)}}">delete</a>]
                     <br>
 
                 </div>

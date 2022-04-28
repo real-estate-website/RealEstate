@@ -17,6 +17,10 @@
                     <p> Idenfifiant favorie : {{$favorie -> id}}</p>
                     <br>
 
+                    [<a href="{{ route('favoriedetails', $favorie->id )}}">details </a>]
+                    [<a href="{{ route('favoriemodifyform', $favorie->id )}}"> Modifier </a>]
+                    [<a href="{{ route('favoriedelete', $favorie->id)}}">delete</a>]
+
                 </div>
             </div>
         </div>

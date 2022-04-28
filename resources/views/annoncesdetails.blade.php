@@ -33,6 +33,16 @@
                         <p>Prix : {{$details -> prix}}</p>
                         <br>
 
+                        <p>Date de création : {{$details ->created_at}}</p>
+                        <br>
+
+                        <p>Dernière mise à jour : {{$details ->updated_at}}</p>
+                        <br>
+
+                        [<a href="{{ route('annoncemodifyform', $details->id )}}"> Modifier </a>]
+                        [<a href="{{ route('annoncedelete', $details->id )}}"> Suprimer </a>]
+
+
                     </ul>
 
 
