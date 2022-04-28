@@ -25,6 +25,9 @@ Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'
 
 Route::get('/annoncesdetails/{id}', [ImmoController::class, 'annoncesdetails'])->middleware(['auth'])->name('annoncesdetails');
 
+Route::get('/annoncemodify', [ImmoController::class, 'annoncemodify'])->middleware(['auth'])->name('annoncemodify');
+
+
 Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
 
 Route::get('/favories', [ImmoController::class, 'favories'])->middleware(['auth'])->middleware(['auth'])->name('favories');

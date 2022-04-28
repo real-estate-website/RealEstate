@@ -17,6 +17,7 @@
                     <p> Type : {{$annonce->type}}</p>
                     <p> Prix : {{$annonce->prix}}</p>
                     [<a href="{{ route('annoncesdetails', $annonce->id )}}">details </a>]
+                    [<a href="{{ route('annoncesmodify', $annonce->id )}}">Modifier </a>]
                     <br>
 
                 </div>

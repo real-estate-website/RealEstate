@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Annonce;
 use App\Models\Favorie;
 use App\Models\Message;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class ImmoController extends Controller
@@ -16,13 +16,22 @@ class ImmoController extends Controller
         $annonces = Annonce::all();
         return view('annonces',['annonces' => $annonces]);
     }
-
     public function annoncesdetails ( Request $request)
     {   
         $annoncesdetails = Annonce::findOrFail($request->id);
         return view('annoncesdetails',['details' => $annoncesdetails]);
     }
 
+    public function annoncemodify ( Request $request)
+    {  
+        $annonce = Annonce::findOrFail($request->id);
+        if($annonce->user_id != Auth::id())
+            abort(404);
+    
+        return view('annoncemodify', ['annonce' => $annonce]);
+    }
+    
+    
     public function Messages ( Request $request)
     {
         $annonces = Message::all();
