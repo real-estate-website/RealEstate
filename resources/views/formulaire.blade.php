@@ -62,14 +62,12 @@
                             <button type="submit" class="btn btn-primary">Envoyer</button>
 
                             <br><br>
-                            <div class="mb-3">
+                            <!--<div class="mb-3">
                                 <label for="formFileMultiple" class="form-label">Choisir les images de votre
                                     maison...</label>
                                 <input class="form-control" type="file" id="formFileMultiple"
                                     accept="image/png, image/jpeg" multiple required>
-                            </div>
-
-                            <button type="submit" class="btn btn-secondary">Envoyer</button>
+                            </div>-->
 
                     </form>
                     </div>
