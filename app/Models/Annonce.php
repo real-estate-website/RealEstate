@@ -27,4 +27,9 @@ class Annonce extends Model
     {
         return $this->belongsTo('App\Models\User', 'user_id', 'id');
     }
+
+    public function categorie()
+    {
+        return $this->belongsTo('App\Models\Categorie', 'categorie_id', 'id');
+    }
 }

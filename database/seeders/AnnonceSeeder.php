@@ -26,6 +26,7 @@ class AnnonceSeeder extends Seeder
             'nbr_chambre' => $faker->numberBetween(1, 10),
             'surface' => $faker->numberBetween(1, 1000),
             'user_id' => $faker->numberBetween(1, 10),
+            'categorie_id' => $faker->numberBetween(1, 10),
         ]);
     }
 }

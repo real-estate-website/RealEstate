@@ -28,6 +28,7 @@ class AnnonceFactory extends Factory
             'nbr_chambre' => $this->faker->numberBetween(1, 10),
             'surface' => $this->faker->numberBetween(1, 1000),
             'user_id' => $this->faker->numberBetween(1, 10),
+            'categorie_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

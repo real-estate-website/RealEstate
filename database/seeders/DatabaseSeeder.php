@@ -20,7 +20,5 @@ class DatabaseSeeder extends Seeder
         \App\Models\Categorie::factory(5)->create();
         \App\Models\Favorie::factory(5)->create();
         \App\Models\Image::factory(5)->create();
-        \App\Models\AnnonceCategorie::factory(5)->create();
-        \App\Models\ImageAnnonce::factory(5)->create();
     }
 }
