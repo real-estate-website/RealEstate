@@ -8,4 +8,17 @@ use Illuminate\Database\Eloquent\Model;
 class Categorie extends Model
 {
     use HasFactory;
+
+    protected $table = 'categories';
+
+    protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'nom',
+    ];
+
+    public function annonces()
+    {
+        return $this->hasMany('App\Models\AnnonceCategorie', 'categorie_id', 'id');
+    }
 }

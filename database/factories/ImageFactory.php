@@ -22,6 +22,7 @@ class ImageFactory extends Factory
         return [
             'nom' => $this->faker->name(),
             'url' => $this->faker->url(),
+            'annonce_id' => $this->faker->numberBetween(1, 10),
         ];
     }
 }

@@ -8,4 +8,23 @@ use Illuminate\Database\Eloquent\Model;
 class Annonce extends Model
 {
     use HasFactory;
+
+    protected $table = 'annonces';
+
+    protected $primaryKey = 'id';
+
+    protected $fillable = [
+        'titre',
+        'description',
+        'type',
+        'nbr_piece',
+        'nbr_chambre',
+        'surface',
+        'prix',
+    ];
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User', 'user_id', 'id');
+    }
 }

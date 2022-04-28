@@ -18,12 +18,22 @@
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('annonces')" :active="request()->routeIs('annonces')">
-                        {{ __('Mes Annonces') }}
+                        {{ __('Mes annonces') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('createannonce')" :active="request()->routeIs('createannonce')">
                         {{ __('Créer votre annonce') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('messages')" :active="request()->routeIs('message')">
+                        {{ __('Mes messages') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('favories')" :active="request()->routeIs('favories')">
+                        {{ __('Mes favoris') }}
                     </x-nav-link>
                 </div>
             </div>

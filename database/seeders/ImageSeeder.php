@@ -20,6 +20,7 @@ class ImageSeeder extends Seeder
         DB::table('images')->insert([
             'nom' => $faker->name(),
             'url' => $faker->url(),
+            'annonce_id' => $faker->numberBetween(1, 10),
         ]);
     }
 }

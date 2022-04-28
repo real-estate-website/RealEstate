@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nom');
             $table->string('url');
+            $table->integer('annonce_id');
             $table->timestamps();
         });
     }

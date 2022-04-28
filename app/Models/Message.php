@@ -21,8 +21,18 @@ class Message extends Model
         'destinataire_id',
     ];
 
-    public function messages()
+    public function annonce()
     {
         return $this->belongsTo('App\Models\User', 'annonce_id', 'expediteur_id', 'destinataire_id');
+    }
+
+    public function expediteur()
+    {
+        return $this->belongsTo('App\Models\User', 'expediteur_id', 'id');
+    }
+
+    public function destinataire()
+    {
+        return $this->belongsTo('App\Models\User', 'destinataire_id', 'id');
     }
 }
