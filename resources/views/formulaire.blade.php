@@ -10,12 +10,12 @@
           <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
               <div class="p-6 bg-white border-b border-gray-200">
                   <div class="container"> 
-                  <form action="" method="post">
+                  <form action="{{ route('postannonce') }}" method="POST" enctype="multipart/form-data">
                       @csrf
                       <div class="form-check form-check-inline">
-<input class="form-check-input" type="radio" name="type" id="appartement" value="0" required>
-<label class="form-check-label" for="appartement">Appartement</label>
-</div>
+                        <input class="form-check-input" type="radio" name="type" id="appartement" value="0" required>
+                        <label class="form-check-label" for="appartement">Appartement</label>
+                    </div>
 <div class="form-check form-check-inline">
 <input class="form-check-input" type="radio" name="type" id="maison" value="1" required>
 <label class="form-check-label" for="maison">Maison</label>
@@ -33,14 +33,17 @@
 
 <div class="row">
   <div class="col-6">
-<input type="number" name="surface" id="surface" required>
-<label for="surface">Surface</label>
+    <input type="number" name="surface" id="surface" required>
+    <label for="surface">Surface</label>
   </div>
   <div class="col-6">
 <input type="number" name="price" id="price" required>
 <label for="price">Prix</label>
 </div>
+</div>
 <br>
+<div class="row">
+
 <div class="col-6">
 <input type="number" name="nbr_piece" id="nbr_piece" required>
 <label for="nbr_piece">Nombre de pièces</label>
@@ -54,7 +57,7 @@
 <br><br>
 <div class="mb-3">
 <label for="formFileMultiple" class="form-label">Choisir les images de votre maison...</label>
-<input class="form-control" type="file" id="formFileMultiple" accept="image/png, image/jpeg" multiple required>
+<input class="form-control" type="file" id="formFileMultiple" name="images[]" multiple accept="image/*" required>
 </div>
 
 <button type="submit" class="btn btn-primary">Envoyer</button>

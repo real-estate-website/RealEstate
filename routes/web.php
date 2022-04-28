@@ -27,7 +27,9 @@ Route::get('/dashboard', function () {
 
 Route::get('/annonces', [ImmoController::class, 'annonces'])->middleware(['auth'])->name('annonces');
 
-Route::get('/createannonce', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
+Route::get('/createannonce/{id}', [ImmoController::class, 'createannonce'])->middleware(['auth'])->name('createannonce');
+
+Route::post('postannonce', [ ImmoController::class, 'postannonce' ])->name('postannonce');
 
 Route::get('/contacts', [ImmoController::class, 'contacts'])->middleware(['auth'])->middleware(['auth'])->name('contacts');
 
