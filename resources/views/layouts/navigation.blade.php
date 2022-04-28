@@ -12,13 +12,18 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('annonces')" :active="request()->routeIs('annonces')">
+                        {{ __('Annonces') }}
+                    </x-nav-link>
+                </div>
+                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
+                    <x-nav-link :href="route('annonces')" :active="request()->routeIs('annonces')">
+                        {{ __('Mes Annonces') }}
                     </x-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('createannonce')" :active="request()->routeIs('createannonce')">
-                        {{ __('Créer votre Annonce') }}
+                        {{ __('Créer votre annonce') }}
                     </x-nav-link>
                 </div>
             </div>

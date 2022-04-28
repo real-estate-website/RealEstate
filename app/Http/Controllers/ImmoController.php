@@ -7,6 +7,7 @@ use App\Models\Favorie;
 use App\Models\Message;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ImmoController extends Controller
 {

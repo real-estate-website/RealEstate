@@ -40,6 +40,12 @@
                 </label>
             </div>
 
+            <div class="mt-4">
+                {!! NoCaptcha::renderJs('fr', false, 'onloadCallback') !!}
+                {!! NoCaptcha::display() !!}
+
+            </div>
+
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
@@ -52,5 +58,11 @@
                 </x-button>
             </div>
         </form>
+        <script type="text/javascript">
+            var onloadCallback = function() {
+              alert("grecaptcha is ready!");
+            };
+        </script>
+          
     </x-auth-card>
 </x-guest-layout>
