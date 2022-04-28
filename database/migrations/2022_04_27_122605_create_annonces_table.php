@@ -23,7 +23,7 @@ return new class extends Migration
             $table->integer('nbr_chambre');
             $table->integer('surface');
             $table->integer('prix');
-            $table->integer('categorie_id');
+            $table->integer('categorie_id')->nullable();
             $table->timestamps();
         });
     }

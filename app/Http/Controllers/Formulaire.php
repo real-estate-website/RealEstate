@@ -36,6 +36,7 @@ class Formulaire extends Controller
                      $media = new Image();
                      $media -> url = $path;
                      $media -> nom = $image->getClientOriginalName();
+                     $media -> annonce_id = $annonce->id;
                      $media->save();
          
                  
